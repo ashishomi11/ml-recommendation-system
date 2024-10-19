@@ -3,6 +3,9 @@ import pickle
 import numpy as np
 import requests
 
+movies_list = None
+movies_titles = None
+similarity = None
 ###Loading movies.pkl and similarity.pkl
 # Verify file content
 try:

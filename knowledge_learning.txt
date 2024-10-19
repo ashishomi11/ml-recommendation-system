@@ -1,0 +1,15 @@
+Recommender systems are of three different types-
+1. Content Based:- These are those systems which based on the similarities of content recommends the content. Here tags are created and based on the similarity of tags the recommender system works.
+2. Collaborative Filtering:- This works on the basis of the user interests. Basically based on the similarities of user the contents are recommended.
+3. Hybrid:- This is the combination of both Content Based and Collaborative Filtering.
+
+Text Vectorization
+1. Bag of words
+2. tfidf
+3. word2vec
+
+##Useful Commands
+pip freeze > requirements.txt
+pip install fastapi uvicorn
+pip install -r requirements.txt
+.venv\Scripts\Activate.ps1

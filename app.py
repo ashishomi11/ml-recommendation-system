@@ -5,18 +5,12 @@ import requests
 
 movies_titles = None
 similarity = None
-movies_list = []
-similarity = []
 ###Loading movies.pkl and similarity.pkl
 # Verify file content
 try:
     with open(r'movies.pkl', 'rb') as file:
-        while True:
-            try:
-                movies_list = pickle.load(file)
-                movies_titles = movies_list['title'].values
-            except EOFError:
-                break
+        movies_list = pickle.load(file)
+        movies_titles = movies_list['title'].values
     print("Movies pickle file loaded successfully.")
 except pickle.UnpicklingError:
     print("Error: The Movie file is not a valid pickle file or is corrupted.")
@@ -25,11 +19,7 @@ except pickle.UnpicklingError:
 # similarity = pickle.load(open('similarity.pkl', 'rb'))
 try:
     with open(r'similarity.pkl', 'rb') as file:
-        while True:
-            try:
-                similarity = pickle.load(file)
-            except EOFError:
-                break
+        similarity = pickle.load(file)
     print("Similarity pickle file loaded successfully.")
 except pickle.UnpicklingError:
     print("Error: The Similarity file is not a valid pickle file or is corrupted.")

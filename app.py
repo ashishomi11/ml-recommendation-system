@@ -4,9 +4,22 @@ import numpy as np
 import requests
 
 ###Loading movies.pkl and similarity.pkl
-movies_list = pickle.load(open('movies.pkl', 'rb'))
+# Verify file content
+try:
+    with open('movies.pkl', 'rb') as file:
+        movies_list = pickle.load(file)
+    print("Movies pickle file loaded successfully.")
+except pickle.UnpicklingError:
+    print("Error: The Movie file is not a valid pickle file or is corrupted.")
+# movies_list = pickle.load(open('movies.pkl', 'rb'))
 movies_titles = movies_list['title'].values
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+# similarity = pickle.load(open('similarity.pkl', 'rb'))
+try:
+    with open('similarity.pkl', 'rb') as file:
+        similarity = pickle.load(file)
+    print("Similarity pickle file loaded successfully.")
+except pickle.UnpicklingError:
+    print("Error: The Similarity file is not a valid pickle file or is corrupted.")
 
 ###fetching the movie poster
 def fetch_poster(movie_id):

@@ -1,1 +1,1 @@
-PorterStemmer
+nltk.stem.porter

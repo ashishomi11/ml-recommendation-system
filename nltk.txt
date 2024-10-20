@@ -1,1 +1,3 @@
-PorterStemmer
+wordnet
+pros_cons
+reuters
